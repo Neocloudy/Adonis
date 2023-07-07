@@ -20,9 +20,10 @@ return function(data, env)
 	})
 
 	for _, tab in ipairs({
-		[1] = tabFrame:NewTab("Main", {Text = "Main"}),
-		[2] = tabFrame:NewTab("GitHub", {Text = "Contributors"}),
-		[3] = tabFrame:NewTab("Misc", {Text = "Everyone Else"})
+		[1] = tabFrame:NewTab("Main", {Text = "Ardornis"}),
+		[2] = tabFrame:NewTab("Adonis", {Text = "Adonis"}),
+		[3] = tabFrame:NewTab("GitHub", {Text = "Contributors"}),
+		[4] = tabFrame:NewTab("Misc", {Text = "Everyone Else"})
 		})
 	do
 		local scroller = tab:Add("ScrollingFrame",{

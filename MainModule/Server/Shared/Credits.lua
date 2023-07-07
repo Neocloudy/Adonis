@@ -1,5 +1,8 @@
 return {
 	Main = {
+		{Text = "Neocloudy",	Desc = "Made Ardornis"};
+	};
+	Adonis = {
 		{Text = "Sceleratis/Davey_Bones",	Desc = "Made Adonis & EISS"};
 		{Text = "Kohltastrophe (Scripth)",	Desc = "For his help with various things and some code"};
 		{Text = "einsteinK",				Desc = "Helped me with some scripting problems early in development and put together the LoadstringParser; Best programmer I know"};

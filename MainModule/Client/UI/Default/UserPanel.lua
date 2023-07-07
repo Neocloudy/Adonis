@@ -58,7 +58,7 @@ return function(data, env)
 	local gTable
 	local window = UI.Make("Window", {
 		Name  = "UserPanel";
-		Title = "Adonis";
+		Title = "Ardornis";
 		Icon = "rbxassetid://7681261289"; --"rbxassetid://7681088830"; --"rbxassetid://7681233602"; --"rbxassetid://7681048299";
 		Size  = {465, 325};
 		AllowMultiple = false;
@@ -351,7 +351,7 @@ return function(data, env)
 		--// Help/Info
 		do
 			infoTab:Add("TextLabel", {
-				Text = "Adonis is a frequently updated, community maintained, open source administration system created by Sceleratis (Davey_Bones). \n\nIts purpose is to assist in the\nadministration and moderation\nof Roblox game servers.\n\nFeel free to take and edit it on\nthe condition that existing credits remain.\nHave an idea? Want to participate? Join us on GitHub! (GitHub.com/Sceleratis/Adonis)";
+				Text = "Ardornis is a downstream of Adonis. \n\n/// Running Adonis v239a ///\n\n/// Originally made by Epix Incorporated ///\n\nFeel free to take Adonis source code or loader, \nbut you must keep their original credits in place!";
 				TextWrapped = true;
 				Size = UDim2.new(1, -145, 1, -10);
 				Position = UDim2.new(0, 5, 0, 5);
@@ -1253,7 +1253,7 @@ return function(data, env)
 				};
 				{
 					Text = "UI Keep Alive: ";
-					Desc = "- Prevents Adonis UI deletion on death";
+					Desc = "- Prevents Ardornis UI deletion on death";
 					Entry = "Boolean";
 					Value = Variables.UIKeepAlive;
 					Function = function(enabled, toggle)
@@ -1266,7 +1266,7 @@ return function(data, env)
 				};
 				{
 					Text = "Particle Effects: ";
-					Desc = "- Enables/Disables Adonis made particles";
+					Desc = "- Enables/Disables Ardornis made particles";
 					Entry = "Boolean";
 					Value = Variables.ParticlesEnabled;
 					Function = function(enabled, toggle)
@@ -1368,7 +1368,7 @@ return function(data, env)
 				};
 				{
 					Text = "Theme: ";
-					Desc = "- Allows you to set the Adonis UI theme";
+					Desc = "- Allows you to set the Ardornis UI theme";
 					Entry = "DropDown";
 					Setting = "CustomTheme";
 					Value = Variables.CustomTheme or "Game Theme";
