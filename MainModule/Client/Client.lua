@@ -798,8 +798,7 @@ return service.NewProxy({
 
 		service.Events.ClientInitialized:Fire()
 		game:GetService("StarterGui"):SetCore("ChatMakeSystemMessage",{Text = "Ardornis client-side loaded."})
-		game:GetService("StarterGui"):SetCore("ChatMakeSystemMessage",{Text = "/// This server is running Ardornis 3.1a ///"})
-		game:GetService("StarterGui"):SetCore("ChatMakeSystemMessage",{Text = "/// Compiled on 7/8/2023 ///"})
+		game:GetService("StarterGui"):SetCore("ChatMakeSystemMessage",{Text = "This server is running Ardornis 3.1a - 7/8/2023"})
 		game:GetService("StarterGui"):SetCore("ChatMakeSystemMessage",{Text = "Welcome "..tostring(game.Players.LocalPlayer.Name)..'!'})
 
 		log("~! Return success")
