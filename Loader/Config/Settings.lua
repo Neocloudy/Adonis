@@ -232,7 +232,7 @@ settings.SaveAdmins = true		  -- If true anyone you :admin or :headadmin in-game
 settings.LoadAdminsFromDS = true  -- If false, any admins saved in your DataStores will not load
 settings.WhitelistEnabled = false -- If true enables the whitelist/server lock; Only lets admins & whitelisted users join
 
-settings.Prefix = ":"				-- The : in :kill me
+settings.Prefix = ";"				-- The : in :kill me
 settings.PlayerPrefix = "!"			-- The ! in !donate; Mainly used for commands that any player can run; Do not make it the same as settings.Prefix
 settings.SpecialPrefix = ""			-- Used for things like "all", "me" and "others" (If changed to ! you would do :kill !me)
 settings.SplitKey = " "				-- The space in :kill me (eg if you change it to / :kill me would be :kill/me)
@@ -313,7 +313,7 @@ settings.CommandFeedback = false		-- Should players be notified when commands wi
 settings.CrossServerCommands = true		-- Are commands which affect more than one server enabled?
 settings.ChatCommands = true			-- If false you will not be able to run commands via the chat; Instead, you MUST use the console or you will be unable to run commands
 settings.CreatorPowers = true			-- Gives me creator-level admin; This is strictly used for debugging; I can't debug without full access to the script
-settings.CodeExecution = true			-- Enables the use of code execution in Adonis; Scripting related (such as :s) and a few other commands require this
+settings.CodeExecution = false			-- Enables the use of code execution in Adonis; Scripting related (such as :s) and a few other commands require this
 settings.SilentCommandDenials = false	-- If true, there will be no differences between the error messages shown when a user enters an invalid command and when they have insufficient permissions for the command
 settings.OverrideChatCallbacks = true		-- If the TextChatService ShouldDeliverCallbacks of all channels are overridden by Adonis on load. Required for muting
 
