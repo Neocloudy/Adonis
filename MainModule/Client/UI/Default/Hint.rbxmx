@@ -2,7 +2,7 @@
 	<Meta name="ExplicitAutoJoints">true</Meta>
 	<External>null</External>
 	<External>nil</External>
-	<Item class="Frame" referent="RBXB0FD0627BE754C9B87F5BC70AE95055B">
+	<Item class="Frame" referent="RBX01640F16AFC040F88257E948B0DF4AE1">
 		<Properties>
 			<bool name="Active">false</bool>
 			<Vector2 name="AnchorPoint">
@@ -17,7 +17,7 @@
 				<G>0.227450997</G>
 				<B>0.227450997</B>
 			</Color3>
-			<float name="BackgroundTransparency">0.699999988</float>
+			<float name="BackgroundTransparency">1</float>
 			<Color3 name="BorderColor3">
 				<R>1</R>
 				<G>1</G>
@@ -62,7 +62,7 @@
 			<bool name="Visible">true</bool>
 			<int name="ZIndex">1</int>
 		</Properties>
-		<Item class="Frame" referent="RBX58492D1C0AAB4241B60E696929759435">
+		<Item class="Frame" referent="RBXB93AC0A365F74398A6911BE0A9D10850">
 			<Properties>
 				<bool name="Active">false</bool>
 				<Vector2 name="AnchorPoint">
@@ -77,7 +77,7 @@
 					<G>0.0705882385</G>
 					<B>0.0705882385</B>
 				</Color3>
-				<float name="BackgroundTransparency">0.699999988</float>
+				<float name="BackgroundTransparency">1</float>
 				<Color3 name="BorderColor3">
 					<R>0.105882362</R>
 					<G>0.164705887</G>
@@ -122,7 +122,7 @@
 				<bool name="Visible">true</bool>
 				<int name="ZIndex">1</int>
 			</Properties>
-			<Item class="TextLabel" referent="RBX6C0DEC3DA4114F3181183D50887C476A">
+			<Item class="TextLabel" referent="RBXE594188B94F840BA96C08A87EDBA5CD8">
 				<Properties>
 					<bool name="Active">false</bool>
 					<Vector2 name="AnchorPoint">
@@ -148,10 +148,9 @@
 					<bool name="ClipsDescendants">false</bool>
 					<bool name="Draggable">false</bool>
 					<Font name="FontFace">
-						<Family><url>rbxasset://fonts/families/SourceSansPro.json</url></Family>
-						<Weight>400</Weight>
+						<Family><url>rbxasset://fonts/families/GothamSSm.json</url></Family>
+						<Weight>500</Weight>
 						<Style>Normal</Style>
-						<CachedFaceId><url>rbxasset://fonts/SourceSansPro-Regular.ttf</url></CachedFaceId>
 					</Font>
 					<int name="LayoutOrder">0</int>
 					<float name="LineHeight">1</float>
@@ -193,6 +192,7 @@
 						<G>1</G>
 						<B>1</B>
 					</Color3>
+					<token name="TextDirection">0</token>
 					<bool name="TextScaled">false</bool>
 					<float name="TextSize">18</float>
 					<Color3 name="TextStrokeColor3">
@@ -200,8 +200,8 @@
 						<G>0</G>
 						<B>0</B>
 					</Color3>
-					<float name="TextStrokeTransparency">0.899999976</float>
-					<float name="TextTransparency">0.100000001</float>
+					<float name="TextStrokeTransparency">0.5</float>
+					<float name="TextTransparency">0</float>
 					<token name="TextTruncate">0</token>
 					<bool name="TextWrapped">true</bool>
 					<token name="TextXAlignment">2</token>
@@ -211,14 +211,14 @@
 				</Properties>
 			</Item>
 		</Item>
-		<Item class="Folder" referent="RBXC079424ED638453BB870AE430F8575A5">
+		<Item class="Folder" referent="RBX82501FE13C8C4988A796E957990DEE5E">
 			<Properties>
 				<BinaryString name="AttributesSerialize"></BinaryString>
 				<string name="Name">Config</string>
 				<int64 name="SourceAssetId">-1</int64>
 				<BinaryString name="Tags"></BinaryString>
 			</Properties>
-			<Item class="ModuleScript" referent="RBXFA5B001A4FD048888AD4DD1CDE6DE822">
+			<Item class="ModuleScript" referent="RBXE0030F5C15DF4A519400229040EDB4D2">
 				<Properties>
 					<BinaryString name="AttributesSerialize"></BinaryString>
 					<Content name="LinkedSource"><null></null></Content>
@@ -347,7 +347,7 @@ end]]></ProtectedString>
 					<BinaryString name="Tags"></BinaryString>
 				</Properties>
 			</Item>
-			<Item class="BoolValue" referent="RBXC5C715F7D5494505BC95AA730AC37B5C">
+			<Item class="BoolValue" referent="RBX8BB4A798024D41F1BB3DE966671BB0D3">
 				<Properties>
 					<BinaryString name="AttributesSerialize"></BinaryString>
 					<string name="Name">AllowMultiple</string>
@@ -356,7 +356,7 @@ end]]></ProtectedString>
 					<bool name="Value">true</bool>
 				</Properties>
 			</Item>
-			<Item class="BoolValue" referent="RBX9BECA5A00F6C4D0E92519E35FC90E647">
+			<Item class="BoolValue" referent="RBXE317E70D85434AD0A8CC3CE02C14BE77">
 				<Properties>
 					<BinaryString name="AttributesSerialize"></BinaryString>
 					<string name="Name">CanKeepAlive</string>

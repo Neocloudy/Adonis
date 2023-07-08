@@ -2,7 +2,7 @@
 	<Meta name="ExplicitAutoJoints">true</Meta>
 	<External>null</External>
 	<External>nil</External>
-	<Item class="Frame" referent="RBXBF7ABE287DF04782A11D0702A6189D8C">
+	<Item class="Frame" referent="RBX527AA466998B47409A69FB8996B5831A">
 		<Properties>
 			<bool name="Active">false</bool>
 			<Vector2 name="AnchorPoint">
@@ -62,19 +62,19 @@
 			<bool name="Visible">true</bool>
 			<int name="ZIndex">9</int>
 		</Properties>
-		<Item class="Folder" referent="RBXB6689565229346B9958D19437A95ED05">
+		<Item class="Folder" referent="RBX57EF874DAC4B41A89C7C1DBB6C98903F">
 			<Properties>
 				<BinaryString name="AttributesSerialize"></BinaryString>
 				<string name="Name">Config</string>
 				<int64 name="SourceAssetId">-1</int64>
 				<BinaryString name="Tags"></BinaryString>
 			</Properties>
-			<Item class="ModuleScript" referent="RBX077E4728D99744E7B0599FA7DE02838B">
+			<Item class="ModuleScript" referent="RBX6528FC4303E244719F834BEDD605746C">
 				<Properties>
 					<BinaryString name="AttributesSerialize"></BinaryString>
 					<Content name="LinkedSource"><null></null></Content>
 					<string name="Name">Code</string>
-					<string name="ScriptGuid">{B359869B-A20E-459D-B091-42AD15D4E219}</string>
+					<string name="ScriptGuid">{8A9CACD4-9890-42F0-9C7E-7B961F206C5A}</string>
 					<ProtectedString name="Source"><![CDATA[client = nil
 cPcall = nil
 Pcall = nil
@@ -177,8 +177,8 @@ return function(data, env)
 		wait(2)
 		sound:Destroy()
 	end)
-	
-	
+
+
 	--// Animate the colors of the notification. Really bad code.
 	task.spawn(function()
 		local gamer = script.Parent.Parent
@@ -225,7 +225,7 @@ end]]></ProtectedString>
 					<BinaryString name="Tags"></BinaryString>
 				</Properties>
 			</Item>
-			<Item class="BoolValue" referent="RBX0C68BEFAD605432CAB7DE90E6F25F844">
+			<Item class="BoolValue" referent="RBX36F26D77BF0F426C96C84F6764FB976A">
 				<Properties>
 					<BinaryString name="AttributesSerialize"></BinaryString>
 					<string name="Name">AllowMultiple</string>
@@ -234,7 +234,7 @@ end]]></ProtectedString>
 					<bool name="Value">true</bool>
 				</Properties>
 			</Item>
-			<Item class="BoolValue" referent="RBXCAB45FE0763047AE8A7B83CD5D585712">
+			<Item class="BoolValue" referent="RBX9DB675AFEF56418E9F3B6F987ABC2ADE">
 				<Properties>
 					<BinaryString name="AttributesSerialize"></BinaryString>
 					<string name="Name">CanKeepAlive</string>
@@ -244,7 +244,7 @@ end]]></ProtectedString>
 				</Properties>
 			</Item>
 		</Item>
-		<Item class="Frame" referent="RBX2DF673818B9744B3BCF41E48311A2BF8">
+		<Item class="Frame" referent="RBX7E8AFC2E6F174324A30ADA6142A1ED02">
 			<Properties>
 				<bool name="Active">false</bool>
 				<Vector2 name="AnchorPoint">
@@ -301,10 +301,10 @@ end]]></ProtectedString>
 				<int64 name="SourceAssetId">-1</int64>
 				<token name="Style">0</token>
 				<BinaryString name="Tags"></BinaryString>
-				<bool name="Visible">false</bool>
+				<bool name="Visible">true</bool>
 				<int name="ZIndex">1</int>
 			</Properties>
-			<Item class="TextButton" referent="RBX34858ECC8FF64CD19692376410F5B66C">
+			<Item class="TextButton" referent="RBX6CBDCD8D53CB412F83DF965816F1CC84">
 				<Properties>
 					<bool name="Active">true</bool>
 					<Vector2 name="AnchorPoint">
@@ -397,7 +397,7 @@ end]]></ProtectedString>
 					<int name="ZIndex">10</int>
 				</Properties>
 			</Item>
-			<Item class="TextButton" referent="RBX875765AA4B50431C8F641253666916F1">
+			<Item class="TextButton" referent="RBX814F2A62D29E4892A16EA218E89C8CF4">
 				<Properties>
 					<bool name="Active">true</bool>
 					<Vector2 name="AnchorPoint">
@@ -490,7 +490,7 @@ end]]></ProtectedString>
 					<int name="ZIndex">10</int>
 				</Properties>
 			</Item>
-			<Item class="TextLabel" referent="RBX72DDE3C0BBC5441489141EDAD9B23408">
+			<Item class="TextLabel" referent="RBX34F1AC22FE4246EB96A15C4ECD31E728">
 				<Properties>
 					<bool name="Active">false</bool>
 					<Vector2 name="AnchorPoint">
@@ -579,7 +579,7 @@ end]]></ProtectedString>
 					<int name="ZIndex">10</int>
 				</Properties>
 			</Item>
-			<Item class="TextLabel" referent="RBX6631E9286A56472E9D0BC261ABC43F09">
+			<Item class="TextLabel" referent="RBX565427FB54CD4F808443DDB040FD9979">
 				<Properties>
 					<bool name="Active">false</bool>
 					<Vector2 name="AnchorPoint">
@@ -668,7 +668,7 @@ end]]></ProtectedString>
 					<int name="ZIndex">10</int>
 				</Properties>
 			</Item>
-			<Item class="ImageLabel" referent="RBX9E08D2C98E4B497D9239C4DACF40ADB5">
+			<Item class="ImageLabel" referent="RBX7498F74F460D4BF582640A839BB7A0DC">
 				<Properties>
 					<bool name="Active">false</bool>
 					<Vector2 name="AnchorPoint">
@@ -762,7 +762,7 @@ end]]></ProtectedString>
 					<int name="ZIndex">10</int>
 				</Properties>
 			</Item>
-			<Item class="Frame" referent="RBXE5BAC651A0FC47949908B6D695A6EBB3">
+			<Item class="Frame" referent="RBXD962C7C85A4A47B19AD47A481511867C">
 				<Properties>
 					<bool name="Active">false</bool>
 					<Vector2 name="AnchorPoint">
@@ -823,6 +823,38 @@ end]]></ProtectedString>
 					<int name="ZIndex">1</int>
 				</Properties>
 			</Item>
+		</Item>
+		<Item class="UIGradient" referent="RBX30902D4ED3184D8D98334251C2749E78">
+			<Properties>
+				<BinaryString name="AttributesSerialize"></BinaryString>
+				<ColorSequence name="Color">0 1 1 1 0 1 1 1 1 0 </ColorSequence>
+				<bool name="Enabled">true</bool>
+				<string name="Name">UIGradient</string>
+				<Vector2 name="Offset">
+					<X>0</X>
+					<Y>0</Y>
+				</Vector2>
+				<float name="Rotation">0</float>
+				<int64 name="SourceAssetId">-1</int64>
+				<BinaryString name="Tags"></BinaryString>
+				<NumberSequence name="Transparency">0 0 0 1 0.3 0 </NumberSequence>
+			</Properties>
+		</Item>
+		<Item class="UIGradient" referent="RBX19055FF085154983BEE06D1D3C19AB98">
+			<Properties>
+				<BinaryString name="AttributesSerialize"></BinaryString>
+				<ColorSequence name="Color">0 1 1 1 0 1 1 1 1 0 </ColorSequence>
+				<bool name="Enabled">true</bool>
+				<string name="Name">UIGradient</string>
+				<Vector2 name="Offset">
+					<X>0</X>
+					<Y>0</Y>
+				</Vector2>
+				<float name="Rotation">0</float>
+				<int64 name="SourceAssetId">-1</int64>
+				<BinaryString name="Tags"></BinaryString>
+				<NumberSequence name="Transparency">0 0 0 1 0.3 0 </NumberSequence>
+			</Properties>
 		</Item>
 	</Item>
 </roblox>

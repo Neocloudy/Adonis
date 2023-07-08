@@ -20,8 +20,8 @@ return function(data, env)
 	})
 
 	for _, tab in ipairs({
-		[1] = tabFrame:NewTab("Main", {Text = "Ardornis"}),
-		[2] = tabFrame:NewTab("Adonis", {Text = "Adonis"}),
+		[1] = tabFrame:NewTab("Main", {Text = "Ardornis Developers"}),
+		[2] = tabFrame:NewTab("Adonis", {Text = "Adonis Developers"}),
 		[3] = tabFrame:NewTab("Contributors", {Text = "Contributors"}),
 		[4] = tabFrame:NewTab("Misc", {Text = "Everyone Else"})
 		})
@@ -56,16 +56,8 @@ return function(data, env)
 			local i = 1
 			local filter = search.Text
 			scroller:ClearAllChildren()
-<<<<<<< HEAD
 			for _, credit in ipairs(require(client.Shared.Credits)[tab.Name]) do
 				if (credit.Text:sub(1, #filter):lower() == filter:lower()) or (tab.Name == "GitHub" and credit.Text:sub(9, 8+#filter):lower() == filter:lower()) then
-=======
-			for _, credit in ipairs(Credits[tab.Name]) do
-				if
-					(string.lower(string.sub(credit.Text, 1, #filter)) == string.lower(filter))
-					or (tab.Name == "Contributors" and string.lower(string.sub(credit.Text, 9, 8 + #filter)) == string.lower(filter))
-				then
->>>>>>> 061af20... remove offsite references
 					scroller:Add("TextLabel", {
 						Text = `  {credit.Text} `;
 						ToolTip = credit.Desc;

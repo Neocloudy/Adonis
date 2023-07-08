@@ -2,7 +2,7 @@
 	<Meta name="ExplicitAutoJoints">true</Meta>
 	<External>null</External>
 	<External>nil</External>
-	<Item class="ScreenGui" referent="RBX767375765F664CBF8D70FB83A6CB700A">
+	<Item class="ScreenGui" referent="RBXE7956FFF54644FCBBAFC341FFE2A273C">
 		<Properties>
 			<BinaryString name="AttributesSerialize"></BinaryString>
 			<bool name="AutoLocalize">false</bool>
@@ -23,7 +23,7 @@
 			<BinaryString name="Tags"></BinaryString>
 			<token name="ZIndexBehavior">0</token>
 		</Properties>
-		<Item class="Frame" referent="RBX6FAF15704A16411A9C7B1B3FC85E8890">
+		<Item class="Frame" referent="RBXA6C51FD50F4A46469A15D4CABC1669BE">
 			<Properties>
 				<bool name="Active">false</bool>
 				<Vector2 name="AnchorPoint">
@@ -83,7 +83,7 @@
 				<bool name="Visible">true</bool>
 				<int name="ZIndex">10</int>
 			</Properties>
-			<Item class="TextLabel" referent="RBX9BC945DABD564488B30C6797874A2202">
+			<Item class="TextLabel" referent="RBXBA8158571FE84C0FA669960B086C4B63">
 				<Properties>
 					<bool name="Active">false</bool>
 					<Vector2 name="AnchorPoint">
@@ -172,7 +172,7 @@
 					<int name="ZIndex">10</int>
 				</Properties>
 			</Item>
-			<Item class="TextLabel" referent="RBX1A9A7AF2CE8D40ACB58DAE19C74A1B45">
+			<Item class="TextLabel" referent="RBXAFF716238DFD4B82B38033753CEC932B">
 				<Properties>
 					<bool name="Active">false</bool>
 					<Vector2 name="AnchorPoint">
@@ -260,7 +260,7 @@
 					<bool name="Visible">true</bool>
 					<int name="ZIndex">10</int>
 				</Properties>
-				<Item class="UICorner" referent="RBXC8A95ECD003D4E3386CE7CBC9F721302">
+				<Item class="UICorner" referent="RBX02968F886E914DAA838C0FF5D1B06DB0">
 					<Properties>
 						<BinaryString name="AttributesSerialize"></BinaryString>
 						<UDim name="CornerRadius">
@@ -273,7 +273,7 @@
 					</Properties>
 				</Item>
 			</Item>
-			<Item class="UICorner" referent="RBXE77DBDF21593427596157427F723DA17">
+			<Item class="UICorner" referent="RBXAA796B30A43B4CBC9FE36A3DD6BE24D2">
 				<Properties>
 					<BinaryString name="AttributesSerialize"></BinaryString>
 					<UDim name="CornerRadius">
@@ -285,7 +285,7 @@
 					<BinaryString name="Tags"></BinaryString>
 				</Properties>
 			</Item>
-			<Item class="UIGradient" referent="RBX43E6F56E1EB244AE9CB71F8520A0C662">
+			<Item class="UIGradient" referent="RBX18DD041658184702A1532CEFFE4B673B">
 				<Properties>
 					<BinaryString name="AttributesSerialize"></BinaryString>
 					<ColorSequence name="Color">0 1 1 1 0 1 1 1 1 0 </ColorSequence>
@@ -298,18 +298,18 @@
 					<float name="Rotation">0</float>
 					<int64 name="SourceAssetId">-1</int64>
 					<BinaryString name="Tags"></BinaryString>
-					<NumberSequence name="Transparency">0 1 0 0.501722 0 0 1 1 0 </NumberSequence>
+					<NumberSequence name="Transparency">0 0.75 0 0.501722 0 0 1 0.75 0 </NumberSequence>
 				</Properties>
 			</Item>
 		</Item>
-		<Item class="Folder" referent="RBXD0F70A83ECBF4262978C7883771CC436">
+		<Item class="Folder" referent="RBX0416823CFE6D40659E276FAE79B212AE">
 			<Properties>
 				<BinaryString name="AttributesSerialize"></BinaryString>
 				<string name="Name">Config</string>
 				<int64 name="SourceAssetId">-1</int64>
 				<BinaryString name="Tags"></BinaryString>
 			</Properties>
-			<Item class="ModuleScript" referent="RBXC4F44F69BEAA4A84B9DB8619CC6C08CF">
+			<Item class="ModuleScript" referent="RBX51B9568DAFFA47E6B62D10F4CE2E4B94">
 				<Properties>
 					<BinaryString name="AttributesSerialize"></BinaryString>
 					<Content name="LinkedSource"><null></null></Content>
@@ -369,7 +369,7 @@ end]]></ProtectedString>
 					<BinaryString name="Tags"></BinaryString>
 				</Properties>
 			</Item>
-			<Item class="BoolValue" referent="RBX7838C5795220472380717AFE449E03EB">
+			<Item class="BoolValue" referent="RBX14EA4738F6844D9C9C517F83BC84E380">
 				<Properties>
 					<BinaryString name="AttributesSerialize"></BinaryString>
 					<string name="Name">AllowMultiple</string>
@@ -378,7 +378,7 @@ end]]></ProtectedString>
 					<bool name="Value">false</bool>
 				</Properties>
 			</Item>
-			<Item class="BoolValue" referent="RBXAF58DFD0E0C24B63A5E44E5F28DC7404">
+			<Item class="BoolValue" referent="RBX29547B02458A4A6B9A1F2192E7F5804E">
 				<Properties>
 					<BinaryString name="AttributesSerialize"></BinaryString>
 					<string name="Name">CanKeepAlive</string>
