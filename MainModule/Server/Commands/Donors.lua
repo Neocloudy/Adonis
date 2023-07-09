@@ -9,7 +9,7 @@ return function(Vargs, env)
 	if env then setfenv(1, env) end
 
 	return {
-		DonorUncape = {
+		--[[DonorUncape = {
 			Prefix = Settings.PlayerPrefix;
 			Commands = {"uncape", "removedonorcape"};
 			Args = {};
@@ -363,7 +363,7 @@ return function(Vargs, env)
 					end
 				end
 			end
-		};
+		};]]
 
 	}
 end

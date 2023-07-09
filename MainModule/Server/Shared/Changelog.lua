@@ -1,8 +1,13 @@
 return {
-	"Ardornis Version: 3.1a";
+	"Ardornis Version: 3.1b";
 	"--> Based off Adonis v239a";
 	"*Drag edges to expand*";
 	"Adonis changelogs not included";
+	"";
+	"Ardornis 3.1b";
+	"- Donating through Ardornis is disabled";
+	"- Donator commands disabled";
+	"- Output recolored";
 	"";
 	"Ardornis 3.1a";
 	"- Necessary changes as required by Roblox";

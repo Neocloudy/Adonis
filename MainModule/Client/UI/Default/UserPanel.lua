@@ -311,9 +311,9 @@ return function(data, env)
 			Text = "Info";
 		})
 
-		local donorTab = tabFrame:NewTab("Donate", {
+		--[[local donorTab = tabFrame:NewTab("Donate", {
 			Text = "Donate";
-		})
+		})]]
 
 		local keyTab = tabFrame:NewTab("Keybinds", {
 			Text = "Keybinds";
@@ -332,9 +332,9 @@ return function(data, env)
 		})
 
 		if data.Tab then
-			if string.lower(data.Tab) == "donate" then
-				donorTab:FocusTab()
-			elseif string.lower(data.Tab) == "keybinds" then
+			--[[if string.lower(data.Tab) == "donate" then
+				donorTab:FocusTab()]]
+			if string.lower(data.Tab) == "keybinds" then
 				keyTab:FocusTab()
 			elseif string.lower(data.Tab) == "aliases" then
 				aliasTab:FocusTab()
@@ -434,7 +434,7 @@ return function(data, env)
 
 		end
 
-
+--[[
 		--// Donor Tab
 		do
 			local donorData       = playerData.Donor
@@ -778,7 +778,7 @@ return function(data, env)
 					promptPurchase(true, 5212082)
 				end
 			})
-		end
+		end ]]
 
 
 		--// Keybinds

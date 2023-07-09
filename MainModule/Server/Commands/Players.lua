@@ -277,7 +277,7 @@ return function(Vargs, env)
 			end
 		};
 
-		Donate = {
+		--[[Donate = {
 			Prefix = Settings.PlayerPrefix;
 			Commands = {"donate", "change", "changecape", "donorperks"};
 			Args = {};
@@ -286,7 +286,7 @@ return function(Vargs, env)
 			Function = function(plr: Player, args: {string})
 				Remote.MakeGui(plr, "UserPanel", {Tab = "Donate"})
 			end
-		};
+		};]]
 
 		GetScript = {
 			Prefix = Settings.PlayerPrefix;
@@ -321,7 +321,7 @@ return function(Vargs, env)
 			end
 		};
 
-		Donors = {
+		--[[Donors = {
 			Prefix = Settings.PlayerPrefix;
 			Commands = {"donors", "donorlist", "donatorlist", "donators"};
 			Args = {"autoupdate? (default: true)"};
@@ -347,7 +347,7 @@ return function(Vargs, env)
 					AutoUpdate = if not args[1] or string.lower(args[1]) == "true" or string.lower(args[1]) == "yes" then 2 else nil;
 				})
 			end
-		};
+		};]]
 
 		RequestHelp = {
 			Prefix = Settings.PlayerPrefix;
