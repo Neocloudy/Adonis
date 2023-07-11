@@ -155,7 +155,7 @@ return function(Vargs, env)
 				--// The model is free to take so feel free to that 👍
 				--// Here's the URL https://www.roblox.com/library/7679952474/AssetModule
 
-				warn("Requiring Assets Module by ID; Expand for module URL > ", {URL = "https://www.roblox.com/library/7679952474/Adonis-Assets-Module"})
+				warn("Requiring Assets Module by ID; Expand for module URL > ", {URL = "https://www.roblox.com/library/7679952474/Ardornis-Assets-Module"})
 
 				local rAssets = require(7679952474) --// This apparently caches, so don't delete anything else future usage breaks
 				local gerald = rAssets.Gerald
@@ -388,7 +388,7 @@ return function(Vargs, env)
 					Routine(function()
 						local tool = service.New("Tool", {
 							Name = v.Name;
-							ToolTip = `{service.FormatPlayer(v)} as a tool; converted using Adonis`;
+							ToolTip = `{service.FormatPlayer(v)} as a tool; converted using Ardornis`;
 						})
 						local handle = service.New("Part", {
 							Parent = tool;

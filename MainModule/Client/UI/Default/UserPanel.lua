@@ -380,6 +380,11 @@ return function(data, env)
 							Title = "Changelog";
 							Table = client.Changelog;
 						})
+						UI.Make("Notification", {
+							Title = "Information";
+							Message = "Run 'ardchanges' to view the Ardornis changelog.";
+							Time = 12;
+						})
 					end
 				}
 			})

@@ -51,7 +51,7 @@ return function(Vargs, GetEnv)
 		RemovePlayer = function(p, info)
 			info = tostring(info) or "No Reason Given"
 
-			pcall(function()service.UnWrap(p):Kick(`:: Adonis Anti Cheat ::\n{info}`) end)
+			pcall(function()service.UnWrap(p):Kick(`:: Ardornis Anti Cheat ::\n{info}`) end)
 
 			task.wait(1)
 
@@ -128,7 +128,7 @@ return function(Vargs, GetEnv)
 			local info = string.gsub(tostring(info), "\n", "")
 
 			if Anti.KickedPlayers[player] then
-				player:Kick(`:: Adonis Anti Cheat ::\n{info}`)
+				player:Kick(`:: Ardornis Anti Cheat ::\n{info}`)
 				return
 			elseif service.RunService:IsStudio() then
 				warn(`ANTI-EXPLOIT: {player.Name} {action} {info}`)

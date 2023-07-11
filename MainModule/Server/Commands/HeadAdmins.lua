@@ -302,7 +302,7 @@ return function(Vargs, env)
 			Prefix = Settings.Prefix;
 			Commands = {"fullclear", "clearinstances", "fullclr"};
 			Args = {};
-			Description = "Removes any instance created server-side by Adonis; May break things";
+			Description = "Removes any instance created server-side by Ardornis; May break things";
 			AdminLevel = "HeadAdmins";
 			Function = function(plr: Player, args: {string})
 				local objects = service.GetAdonisObjects()

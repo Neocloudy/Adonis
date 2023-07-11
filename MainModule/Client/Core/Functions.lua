@@ -884,7 +884,7 @@ return function(Vargs, GetEnv)
 			service.StarterGui:SetCore("ChatMakeSystemMessage",tab)
 
 			if Functions.SendToChat then
-				Functions.SendToChat({Name = "::Adonis::"},msg,"Private")
+				Functions.SendToChat({Name = "::Ardornis::"},msg,"Private")
 			end
 		end;
 
@@ -1196,7 +1196,7 @@ return function(Vargs, GetEnv)
 		end;
 
 		UnCape = function()
-			local cape = service.LocalContainer():FindFirstChild("::Adonis::Cape")
+			local cape = service.LocalContainer():FindFirstChild("::Ardornis::Cape")
 			if cape then cape:Destroy() end
 		end;
 
@@ -1204,7 +1204,7 @@ return function(Vargs, GetEnv)
 			local torso = service.Player.Character:FindFirstChild("HumanoidRootPart")
 			if torso then
 				local p = service.New("Part",service.LocalContainer())
-				p.Name = "::Adonis::Cape"
+				p.Name = "::Ardornis::Cape"
 				p.Anchored = true
 				p.Transparency=0.1
 				p.Material=material

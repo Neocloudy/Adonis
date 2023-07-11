@@ -15,17 +15,17 @@
 --]]
 
 ----------------------------------------------------------------------------------
---                                Adonis Loader                                 --
---                            By Epix Incorporated                              --
+--                                Ardornis Loader                                 --
+--               By Neocloudy, forked from Epix Incorporated: Adonis                        --
 ----------------------------------------------------------------------------------
 --          Edit settings using the Settings module in the Config folder        --
 ----------------------------------------------------------------------------------
---       This script loads the Adonis source (MainModule) into the game.        --
+--       This script loads the Ardornis source (MainModule) into the game.        --
 --            Only edit this script if you know what you're doing!              --
 ----------------------------------------------------------------------------------
 
 local warn = function(...)
-	warn(":: Adonis ::", ...)
+	warn(":: Ardornis ::", ...)
 end
 
 warn("Loading...")
@@ -36,9 +36,9 @@ local RunService = game:GetService("RunService")
 local mutex = RunService:FindFirstChild("__Adonis_MUTEX")
 if mutex then
 	if mutex:IsA("StringValue") then
-		warn("Adonis is already running! Aborting...; Running Location:", mutex.Value, "This Location:", script:GetFullName())
+		warn("Ardornis is already running! Aborting...; Running Location:", mutex.Value, "This Location:", script:GetFullName())
 	else
-		warn("Adonis mutex detected but is not a StringValue! Aborting anyway...; This Location:", script:GetFullName())
+		warn("Ardornis mutex detected but is not a StringValue! Aborting anyway...; This Location:", script:GetFullName())
 	end
 else
 	mutex = Instance.new("StringValue")
@@ -79,13 +79,13 @@ else
 		Dopper = dropper;
 		Runner = runner;
 
-		ModuleID = 7510592873;  		--// https://www.roblox.com/library/7510592873/Adonis-MainModule
-		LoaderID = 7510622625;			--// https://www.roblox.com/library/7510622625/Adonis-Loader-Sceleratis-Davey-Bones-Epix
+		ModuleID = 9259531001;  		--// https://www.roblox.com/library/9259531001/
+		LoaderID = 9259527984;			--// https://www.roblox.com/library/9259527984/
 		
 		--// Note: The nightly module is updated frequently with ever commit merged to the master branch on the Adonis repo.
 		--// It is prone to breaking, unstable, untested, and should not be used for anything other than testing/feature preview.
-		NightlyMode = false;			--// If true, uses the nightly module instead of the current release module.
-		NightlyModuleID = 8612978896; 	--// https://www.roblox.com/library/8612978896/Nightlies-Adonis-MainModule
+		--NightlyMode = false;			--// If true, uses the nightly module instead of the current release module.
+		--NightlyModuleID = 8612978896; 	--// https://www.roblox.com/library/8612978896/Nightlies-Adonis-MainModule
 
 		DebugMode = true;
 	}
@@ -106,7 +106,7 @@ else
 			end
 		end
 		if not moduleId then
-			error(`Adonis DebugMode is enabled but no ModuleScript named 'MainModule' is found in {model.Parent:GetFullName()}`)
+			error(`Ardornis DebugMode is enabled but no ModuleScript named 'MainModule' is found in {model.Parent:GetFullName()}`)
 		end
 	end
 
@@ -150,7 +150,7 @@ else
 	end
 
 	if tonumber(moduleId) then
-		warn(`Requiring Adonis MainModule; Model URL: https://www.roblox.com/library/{moduleId}`)
+		warn(`Requiring Ardornis MainModule; Model URL: https://www.roblox.com/library/{moduleId}`)
 	end
 
 	local module = require(moduleId)
@@ -167,7 +167,7 @@ else
 
 		model.Name = "Adonis_Loader"
 	else
-		error(" !! Adonis MainModule failed to load !! ")
+		error(" !! Ardornis MainModule failed to load !! ")
 	end
 end
 

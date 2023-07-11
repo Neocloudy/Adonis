@@ -589,7 +589,7 @@ return function(Vargs, GetEnv)
 
 			local execCode = Functions.GetRandom()
 
-			scr.Name = `[Adonis] {scriptType}`
+			scr.Name = `[Ardornis] {scriptType}`
 
 			if allowCodes then
 				service.New("StringValue", {
@@ -739,7 +739,7 @@ return function(Vargs, GetEnv)
 		GetDataStore = function()
 			local ran,store = pcall(function()
 
-				return service.DataStoreService:GetDataStore(string.sub(Settings.DataStore, 1, 50),"Adonis")
+				return service.DataStoreService:GetDataStore(string.sub(Settings.DataStore, 1, 50),"Ardornis")
 			end)
 
 			-- DataStore studio check.
@@ -1171,7 +1171,7 @@ return function(Vargs, GetEnv)
 							and Settings.LoadAdminsFromDS
 						then
 							warn(
-								'Admins are loading from the Adonis DataStore when Settings.SaveAdmins is FALSE!\nDisable this warning by adding the setting "SaveAdminsWarning" in Settings (and set it to true!) or set Settings.LoadAdminsFromDS to false'
+								'Admins are loading from the Ardornis DataStore when Settings.SaveAdmins is FALSE!\nDisable this warning by adding the setting "SaveAdminsWarning" in Settings (and set it to true!) or set Settings.LoadAdminsFromDS to false'
 							)
 							Core.WarnedAboutAdminsLoadingWhenSaveAdminsIsOff = true
 						end
@@ -1375,7 +1375,7 @@ return function(Vargs, GetEnv)
 									elseif API_Special[inde] == false then
 										AddLog(Logs.Script, {
 											Text = `Access to {inde} was denied`;
-											Desc = `A server script attempted to access {inde} via _G.Adonis.Access`;
+											Desc = `A server script attempted to access {inde} via _G.Ardornis.Access`;
 										})
 
 										error(`Access Denied: {inde}`)
@@ -1494,19 +1494,19 @@ return function(Vargs, GetEnv)
 							if table.isfrozen and not table.isfrozen(_G) or not table.isfrozen then
 								rawset(_G, "Adonis", AdonisGTable)
 							else
-								warn("⚠️ ADONIS CRITICAL WARNING! MALICIOUS CODE IS TRYING TO CHANGE THE ADONIS _G API AND IT CAN'T BE SET BACK! PLEASE SHUTDOWN THE SERVER AND REMOVE THE MALICIOUS CODE IF POSSIBLE!")
+								warn("⚠️ ARDORNIS CRITICAL WARNING! MALICIOUS CODE IS TRYING TO CHANGE THE ARDORNIS _G API AND IT CAN'T BE SET BACK! PLEASE SHUTDOWN THE SERVER AND REMOVE THE MALICIOUS CODE IF POSSIBLE!")
 							end
 						end
 					end, true)
 				else
-					warn("The _G table was locked and the Adonis _G API could not be loaded")
+					warn("The _G table was locked and the Ardornis _G API could not be loaded")
 				end
 			end
 
 
 			AddLog(Logs.Script, {
 				Text = "Started _G API";
-				Desc = "The Adonis _G API was initialized and is ready to use";
+				Desc = "The Ardornis _G API was initialized and is ready to use";
 			})
 		end;
 	};

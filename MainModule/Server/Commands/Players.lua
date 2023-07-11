@@ -167,7 +167,7 @@ return function(Vargs, env)
 			Prefix = Settings.PlayerPrefix;
 			Commands = {"notifications", "comms", "nc"};
 			Args = {};
-			Description = "Opens the communications panel, showing you all the Adonis messages you have recieved in a timeline";
+			Description = "Opens the communications panel, showing you all the Ardornis messages you have recieved in a timeline";
 			AdminLevel = "Players";
 			Function = function(plr: Player, args: {string})
 				Remote.MakeGui(plr, "CommsPanel")
@@ -325,7 +325,7 @@ return function(Vargs, env)
 			Prefix = Settings.PlayerPrefix;
 			Commands = {"donors", "donorlist", "donatorlist", "donators"};
 			Args = {"autoupdate? (default: true)"};
-			Description = "Shows a list of Adonis donators who are currently in the server";
+			Description = "Shows a list of Ardornis donators who are currently in the server";
 			AdminLevel = "Players";
 			ListUpdater = function(plr: Player)
 				local tab = {}
@@ -511,7 +511,7 @@ return function(Vargs, env)
 			Prefix = Settings.PlayerPrefix;
 			Commands = {"credit", "credits"};
 			Args = {};
-			Description = "Shows you Adonis development credits";
+			Description = "Shows you Ardornis and Adonis development credits";
 			AdminLevel = "Players";
 			Function = function(plr: Player, args: {string})
 				Remote.MakeGui(plr, "Credits")
@@ -525,6 +525,12 @@ return function(Vargs, env)
 			Description = "Shows you the script's changelog";
 			AdminLevel = "Players";
 			Function = function(plr: Player, args: {string})
+				Remote.MakeGui(plr, "Notification", {
+					Title = "Changelog";
+					Message = "Click here to view the Ardornis changelog.";
+					OnClick = Core.Bytecode(`client.Remote.Send('ProcessCommand','{Settings.Prefix}ardchanges')`);
+					Time = 12;
+				})
 				Remote.MakeGui(plr, "List", {
 					Title = "Change Log";
 					Icon = server.MatIcons["Text snippet"];
@@ -620,7 +626,7 @@ return function(Vargs, env)
 			Commands = {"theme", "usertheme"};
 			Args = {"theme name (leave blank to reset to default)"};
 			Hidden = true;
-			Description = "Changes the Adonis client UI theme";
+			Description = "Changes the Ardornis client UI theme";
 			AdminLevel = "Players";
 			Function = function(plr: Player, args: {string})
 				local playerData = Core.GetPlayer(plr)
@@ -642,7 +648,7 @@ return function(Vargs, env)
 			Prefix = Settings.PlayerPrefix;
 			Commands = {"info", "about", "userpanel"};
 			Args = {};
-			Description = "Shows info about the admin system (Adonis)";
+			Description = "Shows info about the admin system (Ardornis)";
 			AdminLevel = "Players";
 			Function = function(plr: Player, args: {string})
 				Remote.MakeGui(plr, "UserPanel", {Tab = "Info";})
@@ -1135,7 +1141,7 @@ return function(Vargs, env)
 					if boughtAssetId == assetId then
 						connection:Disconnect()
 						Remote.MakeGui(plr, "Notification", {
-							Title = "Adonis purchase";
+							Title = "Ardornis purchase";
 							Message = (isPurchased and string.format("Asset %d was purchased successfully!", assetId) or string.format("Asset %d was not bought", assetId));
 							Time = 10;
 						})

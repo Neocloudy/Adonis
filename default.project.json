@@ -1,12 +1,12 @@
 {
-  "name": "Adonis",
+  "name": "Ardornis",
   "tree": {
     "$className": "DataModel",
 
     "ServerScriptService": {
       "$className": "ServerScriptService",
 
-      "Adonis_Rojo": {
+      "Ardornis_Rojo": {
         "$className": "Folder",
         "MainModule": {
           "$path": "MainModule"
@@ -16,7 +16,7 @@
           "$path": "LICENSE.lua"
         },
         
-        "Adonis_Loader": {
+        "Ardornis_Loader": {
           "$className": "Model",
           "$path": "Loader",
 

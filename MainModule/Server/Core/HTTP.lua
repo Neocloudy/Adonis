@@ -254,7 +254,7 @@ return function(Vargs, GetEnv)
 						end
 						local ran, err = pcall(grabData, v)
 						if not ran then
-							warn("Unable to reach Trello. Ensure your board IDs, Trello key, and token are all correct. If issue persists, try increasing HttpWait in your Adonis settings.")
+							warn("Unable to reach Trello. Ensure your board IDs, Trello key, and token are all correct. If issue persists, try increasing HttpWait in your Ardornis settings.")
 							success = false
 							break
 						end

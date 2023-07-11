@@ -65,7 +65,7 @@ return function(Vargs, GetEnv)
 							elseif Admin.SlowMode and not Admin.CheckAdmin(player) and slowCache[player] and os.time() - slowCache[player] < Admin.SlowMode then
 								Remote.MakeGui(player, "Notification", {
 									Title = "You are chatting too fast!";
-									Message = string.format("[Adonis] :: Slow mode enabled! (%g second(s) remaining)", Admin.SlowMode - (os.time() - slowCache[player]));
+									Message = string.format("[Ardornis] :: Slow mode enabled! (%g second(s) remaining)", Admin.SlowMode - (os.time() - slowCache[player]));
 									Time = 10;
 								})
 
@@ -142,10 +142,10 @@ return function(Vargs, GetEnv)
 					end
 
 					if speakerPlayer and Admin.IsMuted(speakerPlayer) then
-						speaker:SendSystemMessage("[Adonis] :: You are muted!", channelName)
+						speaker:SendSystemMessage("[Ardornis] :: You are muted!", channelName)
 						return true
 					elseif speakerPlayer and Admin.SlowMode and not Admin.CheckAdmin(speakerPlayer) and slowCache[speakerPlayer] and os.time() - slowCache[speakerPlayer] < Admin.SlowMode then
-						speaker:SendSystemMessage(string.format("[Adonis] :: Slow mode enabled! (%g second(s) remaining)", Admin.SlowMode - (os.time() - slowCache[speakerPlayer])), channelName)
+						speaker:SendSystemMessage(string.format("[Ardornis] :: Slow mode enabled! (%g second(s) remaining)", Admin.SlowMode - (os.time() - slowCache[speakerPlayer])), channelName)
 						return true
 					end
 

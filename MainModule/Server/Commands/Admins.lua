@@ -18,7 +18,7 @@ return function(Vargs, env)
 			Prefix = ":";
 			Commands = {"rebootadonis", "reloadadonis"};
 			Args = {};
-			Description = "Attempts to force Adonis to reload";
+			Description = "Attempts to force Ardornis to reload";
 			AdminLevel = "Admins";
 			Function = function(plr: Player, args: {string}, data: {any})
 				local rebootHandler = server.Deps.RebootHandler:Clone();
@@ -991,7 +991,7 @@ return function(Vargs, env)
 				assert(string.find(bytecode, "\27Lua"), `Script unable to be created; {string.gsub(bytecode, "Loadstring%.LuaX:%d+:", "")}`)
 
 				local cl = Core.NewScript("Script", args[1], true)
-				cl.Name = "[Adonis] Script"
+				cl.Name = "[Ardornis] Script"
 				cl.Parent = service.ServerScriptService
 				task.wait()
 				cl.Disabled = false
@@ -1016,7 +1016,7 @@ return function(Vargs, env)
 				assert(string.find(bytecode, "\27Lua"), `LocalScript unable to be created; {string.gsub(bytecode, "Loadstring%.LuaX:%d+:", "")}`)
 
 				local cl = Core.NewScript("LocalScript", `script.Parent = game:GetService('Players').LocalPlayer.PlayerScripts; {args[1]}`, true)
-				cl.Name = "[Adonis] LocalScript"
+				cl.Name = "[Ardornis] LocalScript"
 				cl.Disabled = true
 				cl.Parent = plr:FindFirstChildOfClass("Backpack")
 				task.wait()
@@ -1041,7 +1041,7 @@ return function(Vargs, env)
 				local new = Core.NewScript("LocalScript", `script.Parent = game:GetService('Players').LocalPlayer.PlayerScripts; {args[2]}`, true)
 				for i, v in service.GetPlayers(plr, args[1]) do
 					local cl = new:Clone()
-					cl.Name = "[Adonis] LocalScript"
+					cl.Name = "[Ardornis] LocalScript"
 					cl.Disabled = true
 					cl.Parent = v:FindFirstChildOfClass("Backpack")
 					task.wait()
@@ -1439,7 +1439,7 @@ return function(Vargs, env)
 				for _, v in service.GetPlayers(plr, args[1]) do
 					Remote.Send(v, "Function", "SetCore", "SendNotification", {
 						Title = "Notification";
-						Text = args[3] or "Hello, from Adonis!";
+						Text = args[3] or "Hello, from Ardornis!";
 						Duration = tonumber(args[2]) or 5;
 					})
 				end
