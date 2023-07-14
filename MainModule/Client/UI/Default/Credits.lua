@@ -11,7 +11,7 @@ return function(data, env)
 		Name  = "Credits";
 		Title = "Credits";
 		Icon = client.MatIcons.Grade;
-		Size  = {280, 300};
+		Size  = {530, 300};
 		AllowMultiple = false;
 	})
 	local tabFrame = window:Add("TabFrame",{
@@ -20,8 +20,8 @@ return function(data, env)
 	})
 
 	for _, tab in ipairs({
-		[1] = tabFrame:NewTab("Main", {Text = "Ardornis Developers"}),
-		[2] = tabFrame:NewTab("Adonis", {Text = "Adonis Developers"}),
+		[1] = tabFrame:NewTab("Main", {Text = "Ardornis"}),
+		[2] = tabFrame:NewTab("Adonis", {Text = "Adonis"}),
 		[3] = tabFrame:NewTab("Contributors", {Text = "Contributors"}),
 		[4] = tabFrame:NewTab("Misc", {Text = "Everyone Else"})
 		})

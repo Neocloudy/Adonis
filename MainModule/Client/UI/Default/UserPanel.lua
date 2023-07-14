@@ -351,8 +351,9 @@ return function(data, env)
 		--// Help/Info
 		do
 			infoTab:Add("TextLabel", {
-				Text = "Ardornis is a downstream of Adonis. \n\nCurrently based off Adonis v240\n\n/// Originally made by Epix Incorporated ///\n\nFeel free to take Adonis source code or loader, \nbut you must keep their original credits in place!";
+				Text = "Ardornis is a downstream of Adonis. \n\nBuilt from Adonis v240.\n\n/// Originally made by Epix Incorporated ///\n\nFeel free to take Adonis source code or loader, \nbut you must keep their original credits in place!";
 				TextWrapped = true;
+				BackgroundTransparency = 0.5;
 				Size = UDim2.new(1, -145, 1, -10);
 				Position = UDim2.new(0, 5, 0, 5);
 			})

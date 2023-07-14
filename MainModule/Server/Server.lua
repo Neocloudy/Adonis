@@ -1,9 +1,9 @@
 -------------------
--- Adonis Server --
+-- Ardornis Server --
 -------------------
 --!nocheck
 																																																																																						  --[[
-This module is part of Adonis 1.0 and contains lots of old code;
+This module is part of Ardornis 1.0 and contains lots of old code;
 future updates will generally only be made to fix bugs, typos or functionality-affecting problems.
 
 If you find bugs or similar issues, please submit an issue report
@@ -114,7 +114,7 @@ local logError = function(plr, err)
 	end
 
 	if server.Core and server.Core.DebugMode then
-		warn(`::Adonis:: Error: {plr}: {err}`)
+		warn(`::Ardornis:: Error: {plr}: {err}`)
 	end
 
 	if server and server.Logs then
@@ -127,11 +127,11 @@ local logError = function(plr, err)
 end
 
 local print = function(...)
-	print(":: Adonis ::", ...)
+	print(":: Ardornis ::", ...)
 end
 
 local warn = function(...)
-	warn(":: Adonis ::", ...)
+	warn(":: Ardornis ::", ...)
 end
 
 local function CloneTable(tab, recursive)
@@ -236,7 +236,7 @@ local function LoadModule(module, yield, envVars, noEnv, isCore)
 	if server.Logs then
 		server.Logs.AddLog(server.Logs.Script,{
 			Text = `Loaded Module: {module}`;
-			Desc = "Adonis loaded a core module or plugin";
+			Desc = "Ardornis loaded a core module or plugin";
 		})
 	end
 end;
@@ -271,10 +271,10 @@ end;
 local function CleanUp()
 	--local env = getfenv(2)
 	--local ran,ret = pcall(function() return env.script:GetFullName() end)
-	warn("Beginning Adonis cleanup & shutdown process...")
+	warn("Beginning Ardornis cleanup & shutdown process...")
 	--warn(`CleanUp called from {tostring((ran and ret) or "Unknown")}`)
 	--local loader = server.Core.ClientLoader
-	server.Model.Name = "Adonis_Loader"
+	server.Model.Name = "Ardornis_Loader"
 	server.Model.Parent = service.ServerScriptService
 	server.Running = false
 	
@@ -472,7 +472,7 @@ return service.NewProxy({
 		local mutex = service.RunService:FindFirstChild("__Adonis_MODULE_MUTEX")
 		if mutex then
 			warn("\n-----------------------------------------------"
-				.."\nAdonis server-side is already running! Aborting..."
+				.."\nArdornis server-side is already running! Aborting..."
 				.."\n-----------------------------------------------")
 			script:Destroy()
 			return "FAILED"
@@ -485,7 +485,7 @@ return service.NewProxy({
 					if not m or m.Parent ~= service.RunService then
 						connection1:Disconnect()
 						connection2:Disconnect()
-						warn("Adonis module mutex removed; Regenerating...")
+						warn("Ardornis module mutex removed; Regenerating...")
 						makePersistent(mutexBackup)
 						mutexBackup.Parent = service.RunService
 						mutexBackup = mutexBackup:Clone()
@@ -493,7 +493,7 @@ return service.NewProxy({
 				end)
 				connection2 = m:GetPropertyChangedSignal("Name"):Connect(function()
 					if m and m.Name ~= "__Adonis_MODULE_MUTEX" then
-						warn("Adonis module mutex renamed; Refreshing...")
+						warn("Ardornis module mutex renamed; Refreshing...")
 						m.Name = "__Adonis_MODULE_MUTEX"
 					end
 				end)
@@ -699,7 +699,7 @@ return service.NewProxy({
 		if server.Logs then
 			server.Logs.AddLog(server.Logs.Script, {
 				Text = "Finished Loading";
-				Desc = "Adonis has finished loading";
+				Desc = "Ardornis has finished loading";
 			})
 		else
 			warn("SERVER.LOGS TABLE IS MISSING. THIS SHOULDN'T HAPPEN! SOMETHING WENT WRONG WHILE LOADING CORE MODULES(?)");

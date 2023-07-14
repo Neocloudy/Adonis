@@ -2,7 +2,7 @@
 	<Meta name="ExplicitAutoJoints">true</Meta>
 	<External>null</External>
 	<External>nil</External>
-	<Item class="ScreenGui" referent="RBX07214F6C5DDD483789249D411E7A78EA">
+	<Item class="ScreenGui" referent="RBX94738373070A4829A2BB11275E4E214C">
 		<Properties>
 			<BinaryString name="AttributesSerialize"></BinaryString>
 			<bool name="AutoLocalize">false</bool>
@@ -13,7 +13,7 @@
 			<bool name="ResetOnSpawn">false</bool>
 			<Ref name="RootLocalizationTable">null</Ref>
 			<token name="SafeAreaCompatibility">1</token>
-			<token name="ScreenInsets">2</token>
+			<token name="ScreenInsets">1</token>
 			<token name="SelectionBehaviorDown">0</token>
 			<token name="SelectionBehaviorLeft">0</token>
 			<token name="SelectionBehaviorRight">0</token>
@@ -23,7 +23,103 @@
 			<BinaryString name="Tags"></BinaryString>
 			<token name="ZIndexBehavior">0</token>
 		</Properties>
-		<Item class="Frame" referent="RBX31B20A7C792D43B7ACF33D46E41B24EB">
+		<Item class="Folder" referent="RBX053F9652787C4C049036724FCFAABD1F">
+			<Properties>
+				<BinaryString name="AttributesSerialize"></BinaryString>
+				<string name="Name">Config</string>
+				<int64 name="SourceAssetId">-1</int64>
+				<BinaryString name="Tags"></BinaryString>
+			</Properties>
+			<Item class="ModuleScript" referent="RBX64239DC5B2014E5D9A44A938E16E2217">
+				<Properties>
+					<BinaryString name="AttributesSerialize"></BinaryString>
+					<Content name="LinkedSource"><null></null></Content>
+					<string name="Name">Code</string>
+					<string name="ScriptGuid">{BA474C25-A69D-46C3-846A-B1AC078BB3FD}</string>
+					<ProtectedString name="Source"><![CDATA[client = nil
+cPcall = nil
+Pcall = nil
+Routine = nil
+service = nil
+gTable = nil
+
+--// All global vars will be wiped/replaced except script
+
+return function(data)
+	local playergui = service.PlayerGui
+	local localplayer = service.Players.LocalPlayer
+	local scr = client.UI.Prepare(script.Parent.Parent)
+	local main = scr.Main
+	local t1 = main.Title
+	local t2 = main.Message
+	local msg = data.Message
+	local color = data.Color
+	
+	local tweenInfo = TweenInfo.new(0.20)
+	
+	local found = client.UI.Get("Output")
+	if found then
+		for i,v in pairs(found) do
+			local p = v.Object
+			if p and p.Parent then
+				--p.Main.Position = UDim2.new(0.234, 0, 0.714, p.Main.Position.Y.Offset+50)
+				p.Main.Message.Font = "Gotham"
+				--p.Main.BackgroundColor3 = Color3.new(0.2, 0.2, 0.2)
+				p.Main.Message.TextColor3 = Color3.new(1, 0.576471, 0.576471)
+				p.Main.Message.TextStrokeColor3 = Color3.new(0.380392, 0, 0)
+				local consoleOpenTween1 = service.TweenService:Create(p.Main, tweenInfo, {
+					Position = UDim2.new(0.234, 0, 0.714, p.Main.Position.Y.Offset+55);
+				})
+				consoleOpenTween1:Play()
+				game:GetService("TweenService"):Create(p.Main, TweenInfo.new(0.25, Enum.EasingStyle.Linear), {BackgroundColor3 = Color3.new(0.2, 0.2, 0.2)}):Play()
+			end
+		end
+	end
+	
+	t2.Text = msg
+	t2.Font = "GothamBlack"
+	
+	task.spawn(function()
+		local sound = Instance.new("Sound",service.LocalContainer())
+		sound.SoundId = 'rbxassetid://'.."11903981713"--client.NotificationSound
+		sound.Volume = 1
+		--wait(0.30)
+		sound:Play()
+		wait(1)
+		sound:Destroy()
+	end)
+	
+	gTable.Ready()
+	wait(5)
+	gTable.Destroy()
+	--gTable.Ready()
+	--wait(5)
+	--gTable.Destroy()
+end]]></ProtectedString>
+					<int64 name="SourceAssetId">-1</int64>
+					<BinaryString name="Tags"></BinaryString>
+				</Properties>
+			</Item>
+			<Item class="BoolValue" referent="RBX578EC87208D84353B6CD0F4F4BBE8E83">
+				<Properties>
+					<BinaryString name="AttributesSerialize"></BinaryString>
+					<string name="Name">AllowMultiple</string>
+					<int64 name="SourceAssetId">-1</int64>
+					<BinaryString name="Tags"></BinaryString>
+					<bool name="Value">false</bool>
+				</Properties>
+			</Item>
+			<Item class="BoolValue" referent="RBX29A7E9E734534B88B7361F70B742C65D">
+				<Properties>
+					<BinaryString name="AttributesSerialize"></BinaryString>
+					<string name="Name">CanKeepAlive</string>
+					<int64 name="SourceAssetId">-1</int64>
+					<BinaryString name="Tags"></BinaryString>
+					<bool name="Value">true</bool>
+				</Properties>
+			</Item>
+		</Item>
+		<Item class="Frame" referent="RBXE551E80C3FA64D9E83C183D3FC8D7E4A">
 			<Properties>
 				<bool name="Active">false</bool>
 				<Vector2 name="AnchorPoint">
@@ -83,7 +179,7 @@
 				<bool name="Visible">true</bool>
 				<int name="ZIndex">10</int>
 			</Properties>
-			<Item class="TextLabel" referent="RBX2B0C61BF410C4002A985315CC9AEE687">
+			<Item class="TextLabel" referent="RBXC7D95230CCE94709A8C93BC982A7EBD8">
 				<Properties>
 					<bool name="Active">false</bool>
 					<Vector2 name="AnchorPoint">
@@ -109,10 +205,10 @@
 					<bool name="ClipsDescendants">false</bool>
 					<bool name="Draggable">false</bool>
 					<Font name="FontFace">
-						<Family><url>rbxasset://fonts/families/SourceSansPro.json</url></Family>
+						<Family><url>rbxasset://fonts/families/LegacyArial.json</url></Family>
 						<Weight>400</Weight>
 						<Style>Normal</Style>
-						<CachedFaceId><url>rbxasset://fonts/SourceSansPro-Regular.ttf</url></CachedFaceId>
+						<CachedFaceId><url>rbxasset://fonts/arial.ttf</url></CachedFaceId>
 					</Font>
 					<int name="LayoutOrder">0</int>
 					<float name="LineHeight">1</float>
@@ -172,7 +268,7 @@
 					<int name="ZIndex">10</int>
 				</Properties>
 			</Item>
-			<Item class="TextLabel" referent="RBXC80CEDDF2E5E4846AE56B40B0867414E">
+			<Item class="TextLabel" referent="RBX24AA245FF68E414791B58B985C9EA21E">
 				<Properties>
 					<bool name="Active">false</bool>
 					<Vector2 name="AnchorPoint">
@@ -198,8 +294,8 @@
 					<bool name="ClipsDescendants">false</bool>
 					<bool name="Draggable">false</bool>
 					<Font name="FontFace">
-						<Family><url>rbxasset://fonts/families/GothamSSm.json</url></Family>
-						<Weight>900</Weight>
+						<Family><url>rbxasset://fonts/families/SourceSansPro.json</url></Family>
+						<Weight>700</Weight>
 						<Style>Normal</Style>
 					</Font>
 					<int name="LayoutOrder">0</int>
@@ -259,7 +355,7 @@
 					<bool name="Visible">true</bool>
 					<int name="ZIndex">10</int>
 				</Properties>
-				<Item class="UICorner" referent="RBXC21A3E9C60A54687AEF0E64DC23B6629">
+				<Item class="UICorner" referent="RBXC9B2DF5495DE48DF99AF7DDE9AC2E5A7">
 					<Properties>
 						<BinaryString name="AttributesSerialize"></BinaryString>
 						<UDim name="CornerRadius">
@@ -272,7 +368,7 @@
 					</Properties>
 				</Item>
 			</Item>
-			<Item class="UICorner" referent="RBXDA186FBCC4B545A3A766B87A80D3654E">
+			<Item class="UICorner" referent="RBX7A89062DE32F4F4C8C0E961A69690F32">
 				<Properties>
 					<BinaryString name="AttributesSerialize"></BinaryString>
 					<UDim name="CornerRadius">
@@ -284,7 +380,7 @@
 					<BinaryString name="Tags"></BinaryString>
 				</Properties>
 			</Item>
-			<Item class="UIGradient" referent="RBX78B5E120BAC4476E86764EA33B92AA60">
+			<Item class="UIGradient" referent="RBX0EFC513078904665BF453AB4F780E698">
 				<Properties>
 					<BinaryString name="AttributesSerialize"></BinaryString>
 					<ColorSequence name="Color">0 1 1 1 0 1 1 1 1 0 </ColorSequence>
@@ -298,93 +394,6 @@
 					<int64 name="SourceAssetId">-1</int64>
 					<BinaryString name="Tags"></BinaryString>
 					<NumberSequence name="Transparency">0 0.5 0 0.501722 0 0 1 0.5 0 </NumberSequence>
-				</Properties>
-			</Item>
-		</Item>
-		<Item class="Folder" referent="RBX094B20EF571847D3BB55DD1549AD6370">
-			<Properties>
-				<BinaryString name="AttributesSerialize"></BinaryString>
-				<string name="Name">Config</string>
-				<int64 name="SourceAssetId">-1</int64>
-				<BinaryString name="Tags"></BinaryString>
-			</Properties>
-			<Item class="ModuleScript" referent="RBX33C247FB7371409FB82B19743F1289BF">
-				<Properties>
-					<BinaryString name="AttributesSerialize"></BinaryString>
-					<Content name="LinkedSource"><null></null></Content>
-					<string name="Name">Code</string>
-					<string name="ScriptGuid">{563ED881-67B0-43D4-9E9C-5F4E5BD0FFDF}</string>
-					<ProtectedString name="Source"><![CDATA[client = nil
-cPcall = nil
-Pcall = nil
-Routine = nil
-service = nil
-gTable = nil
-
---// All global vars will be wiped/replaced except script
-
-return function(data)
-	local playergui = service.PlayerGui
-	local localplayer = service.Players.LocalPlayer
-	local scr = client.UI.Prepare(script.Parent.Parent)
-	local main = scr.Main
-	local t1 = main.Title
-	local t2 = main.Message
-	local msg = data.Message
-	local color = data.Color
-	
-	local found = client.UI.Get("Output")
-	if found then
-		for i,v in pairs(found) do
-			local p = v.Object
-			if p and p.Parent then
-				p.Main.Position = UDim2.new(0.234, 0, 0.714, p.Main.Position.Y.Offset+50)
-				p.Main.Message.Font = "Gotham"
-				p.Main.BackgroundColor3 = Color3.new(0.2, 0.2, 0.2)
-				p.Main.Message.TextColor3 = Color3.new(1, 0.576471, 0.576471)
-				p.Main.Message.TextStrokeColor3 = Color3.new(0.380392, 0, 0)
-				
-			end
-		end
-	end
-	
-	t2.Text = msg
-	t2.Font = "GothamBlack"
-	
-	task.spawn(function()
-		local sound = Instance.new("Sound",service.LocalContainer())
-		sound.SoundId = 'rbxassetid://'.."11903981713"--client.NotificationSound
-		sound.Volume = 1
-		--wait(0.30)
-		sound:Play()
-		wait(1)
-		sound:Destroy()
-	end)
-	--t2.Position = UDim2.new(0, 0, 0.35, 0)
-	gTable.Ready()
-	wait(5)
-	gTable.Destroy()
-end]]></ProtectedString>
-					<int64 name="SourceAssetId">-1</int64>
-					<BinaryString name="Tags"></BinaryString>
-				</Properties>
-			</Item>
-			<Item class="BoolValue" referent="RBXD2A89648DF83426B8DC2C17E802BC357">
-				<Properties>
-					<BinaryString name="AttributesSerialize"></BinaryString>
-					<string name="Name">AllowMultiple</string>
-					<int64 name="SourceAssetId">-1</int64>
-					<BinaryString name="Tags"></BinaryString>
-					<bool name="Value">false</bool>
-				</Properties>
-			</Item>
-			<Item class="BoolValue" referent="RBXC19E91B77F764A3788C0C7F4D27062EA">
-				<Properties>
-					<BinaryString name="AttributesSerialize"></BinaryString>
-					<string name="Name">CanKeepAlive</string>
-					<int64 name="SourceAssetId">-1</int64>
-					<BinaryString name="Tags"></BinaryString>
-					<bool name="Value">true</bool>
 				</Properties>
 			</Item>
 		</Item>

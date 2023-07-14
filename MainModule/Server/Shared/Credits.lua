@@ -1,6 +1,9 @@
 return {
 	Main = {
+		{Text = "/// Developers ///",	Desc = "These people directly worked on Ardornis."};
 		{Text = "Neocloudy",	Desc = "Made Ardornis"};
+		{Text = "/// Additional Acknowledgements ///",	Desc = "Not Developers, but Ardornis uses their work."};
+		{Text = "EasternBloxxer",	Desc = "Made Astra & Promethe; previous base for Ardornis 1.0 and 2.0, made & distributed Window code in 3.3"};
 	};
 	Adonis = {
 		{Text = "Sceleratis/Davey_Bones",	Desc = "Made Adonis & EISS"};

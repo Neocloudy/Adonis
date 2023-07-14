@@ -1,7 +1,16 @@
 return {
-	"Ardornis Version: 3.2";
+	"Ardornis Version: 3.3";
 	"Run ;changelog to see Adonis changes!";
 	"*Drag edges to expand*";
+	"";
+	"Ardornis 3.3";
+	"- Windows redesigned (again)";
+	"	- based off Astra window code with a few visual changes";
+	"	- credits updated to acknowledge this";
+	"	- tabs and title are now centered, most window elements are a little transparent";
+	"	- close and minimize buttons now use images (also applies to notifications)";
+	"- Notifications redesigned";
+	"- Outputs tween from dark purple to gray and also tween when being moved by another";
 	"";
 	"Ardornis 3.2";
 	"- Changed many player-facing mentions of Adonis to Ardornis where a player can see it";
