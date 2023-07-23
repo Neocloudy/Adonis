@@ -1,9 +1,23 @@
 return {
-	"Ardornis Version: 3.3";
-	"Run ;changelog to see Adonis changes!";
+	"Version: 3.3a - UI Phase 2.1";
+	"Run ;changelog to see Adonis changes.";
 	"*Drag edges to expand*";
 	"";
-	"Ardornis 3.3";
+	"Ardornis 3.3a - UI Phase 2.1";
+	"- Windows changed";
+	"	- Title has a different font and is centered";
+	"	- Windows retain their previous X size when minimized";
+	"	- Minimum X size for regular windows increased to 275 from 150";
+	"	- Minimum X size for List windows increased to 300 from 200";
+	"- UserPanel redesigned sorta";
+	"	- Opening the UserPanel through the Help button in the corner lands you on the Help tab";
+	"	  The Help tab contains information on the script and UserPanel tabs.";
+	"	- Info tab renamed to General, description changed to use RichText smartly";
+	"	- Keybinds and Aliases tabs start with tutorials, these disappear when creating a keybind/alias";
+	"- Windows XP, Rounded, Colorize, Basic Admin themes all removed";
+	"	- This is due to inconsistencies and bugs when used with Ardornis as a base theme.";
+	"";
+	"Ardornis 3.3 - UI Phase 2";
 	"- Windows redesigned (again)";
 	"	- based off Astra window code with a few visual changes";
 	"	- credits updated to acknowledge this";
@@ -30,7 +44,7 @@ return {
 	"- Output's transparency tweaked";
 	"- Notifications are no longer blank";
 	"";
-	"Ardornis 3.1";
+	"Ardornis 3.1 - Rebase + UI Phase 1";
 	"- adonis update: Rebased to Adonis v239a: About 7 months of changes caught up on";
 	"- Redesigned UI again";
 	"	- Sounds added to messages, notifications, small messages, and outputs (errors)";

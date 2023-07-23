@@ -307,8 +307,12 @@ return function(data, env)
 			Position = UDim2.new(0, 5, 0, 5);
 		})
 
+		local ardTab = tabFrame:NewTab("Ardornis", {
+			Text = "Help";
+		})
+
 		local infoTab = tabFrame:NewTab("Info", {
-			Text = "Info";
+			Text = "General";
 		})
 
 		--[[local donorTab = tabFrame:NewTab("Donate", {
@@ -351,8 +355,9 @@ return function(data, env)
 		--// Help/Info
 		do
 			infoTab:Add("TextLabel", {
-				Text = "Ardornis is a downstream of Adonis. \n\nBuilt from Adonis v240.\n\n/// Originally made by Epix Incorporated ///\n\nFeel free to take Adonis source code or loader, \nbut you must keep their original credits in place!";
+				Text = "<font face='Gotham'><font size='24'><b>Welcome!</b></font>\n\n<font size='13'>This game is running Ardornis 3, a custom-made\nAdonis downstream. It serves to assist in moderating Roblox game servers with a wide array of utilities and commands.\n\nFor extra help, click the Help button in the corner of this window or\nclick the Help tab above this box.\n\nBuilt from <b>Adonis v240</b>\n\nView the credits to see original Adonis developers!</font></font>";
 				TextWrapped = true;
+				RichText = true;
 				BackgroundTransparency = 0.5;
 				Size = UDim2.new(1, -145, 1, -10);
 				Position = UDim2.new(0, 5, 0, 5);
@@ -370,9 +375,16 @@ return function(data, env)
 				}
 			})
 
+			--infoTab:Add("TextLabel", {
+			--	Text = "Changelogs";
+			--	Size = UDim2.new(0, 130, 0, 20);
+			--	Position = UDim2.new(1, -135, 0, 50);
+			--	BackgroundTransparency = 1;
+			--})
+
 			infoTab:Add("TextButton", {
-				Text = "Changelog";
-				Size = UDim2.new(0, 130, 0, 40);
+				Text = "Adonis Changes";
+				Size = UDim2.new(0, 130, 0, 18);
 				Position = UDim2.new(1, -135, 0, 50);
 				BackgroundTransparency = 0.5;
 				Events = {
@@ -381,10 +393,21 @@ return function(data, env)
 							Title = "Changelog";
 							Table = client.Changelog;
 						})
-						UI.Make("Notification", {
-							Title = "Information";
-							Message = "Run 'ardchanges' to view the Ardornis changelog.";
-							Time = 12;
+					end
+				}
+			})
+
+			infoTab:Add("TextButton", {
+				Text = "Ardornis Changes";
+				--TextColor3 = Color3.fromRGB(255, 163, 250);
+				Size = UDim2.new(0, 130, 0, 18);
+				Position = UDim2.new(1, -135, 0, 72);
+				BackgroundTransparency = 0.5;
+				Events = {
+					MouseButton1Down = function()
+						UI.Make("List", {
+							Title = "Ardornis Changelog";
+							Table = client.ArdChangelog;
 						})
 					end
 				}
@@ -438,8 +461,43 @@ return function(data, env)
 				Position = UDim2.new(1, -22, 0, 4);
 			})
 
+			infoTab:Add("TextButton", {
+				Text = "Help";
+				Size = UDim2.new(0, 130, 0, 25);
+				Position = UDim2.new(1, -135, 0, 230);
+				BackgroundTransparency = 0.5;
+				Events = {
+					MouseButton1Down = function()
+						ardTab:FocusTab()
+					end
+				}
+			})
+
 		end
 
+		--// Help Tab
+		do
+			local ardinfo = ardTab:Add("TextLabel", {
+				Text = "<font face='Gotham'><font size='24'><b>Ardornis Help</b></font>\nThis is the User Panel for Ardornis 3.0, a custom\nAdonis admin downstream maintained by Neocloudy.\n<b>Tab Info</b>\n<font size='13'><b>General:</b> Script introduction is found in this tab.\n<b>Keybinds:</b> Allows you to set keys to run specific commands.\n<b>Aliases:</b> Allows you to set your own alias for a command.\n<b>Client:</b> Change client-side setting such as console key and theme.\n<b>Game:</b> Change game settings. Usable only by Rank 900+ or Creators.\n\n<b>Ardornis is maintained by Neocloudy, and built from Adonis.\nTo view general script info, click the button below.</b></font></font>";
+				TextWrapped = true;
+				RichText = true;
+				BackgroundTransparency = 1;
+				Size = UDim2.new(1, -10, 1, -35);
+				Position = UDim2.new(0, 5, 0, 5);
+			})
+
+			local editButton = ardTab:Add("TextButton", {
+				Text = "<b>Open General Tab</b>";
+				RichText = true;
+				BackgroundTransparency = 0.5;
+				Size = UDim2.new(1, -10, 0, 25);
+				Position = UDim2.new(0, 5, 1, -25);
+				OnClicked = function(button)
+					infoTab:FocusTab()
+				end
+			})
+
+		end
 --[[
 		--// Donor Tab
 		do
@@ -808,7 +866,14 @@ return function(data, env)
 				BackgroundTransparency = 0.5;
 			})
 
-
+			local bindtutorial = keyTab:Add("TextLabel", {
+				Text = "<font face='Gotham'><font size='24'><b>Keybinds Menu</b></font>\n\n<font size='13'>This menu allows you to bind keys to running commands.\nExample Usage: Set <i>Command</i> to the intended command with prefix.\nSet <i>Keybind</i> to your intended keybind and wait a few seconds.\n<b>The result allows you to press your bound key to trigger the command.</b>\n\nUse <i>Add</i> to create a keybind.\nUse <i>Edit</i> to change or rebind existing Keybinds.\nUse <i>Remove</i> to remove a Keybind permanently.\n<b>Creating a Keybind hides this tutorial.</b></font></font>";
+				TextWrapped = true;
+				RichText = true;
+				BackgroundTransparency = 1;
+				Size = UDim2.new(1, -10, 1, -35);
+				Position = UDim2.new(0, 5, 0, 5);
+			})
 
 			local function getBinds()
 				local num = 0
@@ -816,8 +881,10 @@ return function(data, env)
 				binds:ClearAllChildren();
 
 				for i,v in Variables.KeyBinds do
+					bindtutorial:Destroy()
 					binds:Add("TextButton", {
 						Text = `Key: {string.upper(keyCodeToName(i))} | Command: {v}`;
+						RichText = true;
 						Size = UDim2.new(1, 0, 0, 25);
 						Position = UDim2.new(0, 0, 0, num*25);
 						OnClicked = function(button)
@@ -1046,12 +1113,22 @@ return function(data, env)
 				BackgroundTransparency = 0.5;
 			})
 
+			local aliastutorial = aliasTab:Add("TextLabel", {
+				Text = "<font face='Gotham'><font size='24'><b>Alias Menu</b></font>\n\n<font size='13'>This menu allows you to locally create an alias of a command to run.\nExample Usage: Set <i>Command</i> to the original command\nwith correct prefix and set <i>Alias</i> as your intended alias with a prefix.\n<b>The result allows your set <i>Command</i> to also\nfunction using your set alias.</b>\n\nUse <i>Add</i> to create an Alias.\nUse <i>Edit</i> to change or rebind existing Aliases.\nUse <i>Remove</i> to remove an Alias permanently.\n<b>Creating an Alias hides this tutorial.</b></font></font>";
+				TextWrapped = true;
+				RichText = true;
+				BackgroundTransparency = 1;
+				Size = UDim2.new(1, -10, 1, -35);
+				Position = UDim2.new(0, 5, 0, 5);
+			})
+
 			local function getAliases()
 				local num = 0
 				selected = nil
 				aliases:ClearAllChildren();
 
 				for i, v in Variables.Aliases do
+					aliastutorial:Destroy()
 					aliases:Add("TextButton", {
 						Text = `Alias: {i} | Command: {v}`;
 						Size = UDim2.new(1, 0, 0, 25);

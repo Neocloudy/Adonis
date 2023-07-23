@@ -563,6 +563,7 @@ return service.NewProxy({
 
 		client.Typechecker = oldReq(service_UnWrap(client.Shared.Typechecker))
 		client.Changelog = oldReq(service_UnWrap(client.Shared.Changelog))
+		client.ArdChangelog = oldReq(service_UnWrap(client.Shared.ArdChangelog))
 		do
 			local MaterialIcons = oldReq(service_UnWrap(client.Shared.MatIcons))
 			client.MatIcons = setmetatable({}, {
@@ -798,7 +799,7 @@ return service.NewProxy({
 
 		service.Events.ClientInitialized:Fire()
 		game:GetService("StarterGui"):SetCore("ChatMakeSystemMessage",{Text = "Ardornis client-side loaded."})
-		game:GetService("StarterGui"):SetCore("ChatMakeSystemMessage",{Text = "Version 3.3 - 7/14/2023"})
+		game:GetService("StarterGui"):SetCore("ChatMakeSystemMessage",{Text = "Version 3.3a - 7/23/2023"})
 		game:GetService("StarterGui"):SetCore("ChatMakeSystemMessage",{Text = "Welcome "..tostring(game.Players.LocalPlayer.Name)..'!'})
 
 		log("~! Return success")

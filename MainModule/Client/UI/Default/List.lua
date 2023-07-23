@@ -182,7 +182,7 @@ return function(data, env)
 		Title = Title;
 		Icon = Icon;
 		Size = Size or {300, 250};
-		MinSize = {200, 120};
+		MinSize = {300, 120};
 		OnRefresh = Update and function()
 			Tab = client.Remote.Get("UpdateList", Update, unpack(UpdateArgs or {UpdateArg}))
 			if Tab then
