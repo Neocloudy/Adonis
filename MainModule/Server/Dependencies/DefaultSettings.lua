@@ -107,24 +107,20 @@ local descs = {};			--// Contains settings descriptions
 			The Trello abilities of the script allow you to manage lists and permissions via
 			a Trello board; The following will guide you through the process of setting up a board;
 
-				1. Sign up for an account at http://trello.com
+				1. Sign up for an account at Trello
 				2. Create a new board
-					http://prntscr.com/b9xljn
-					http://prntscr.com/b9xm53
-				3. Get the board ID;
-					http://prntscr.com/b9xngo
+				3. Get the board ID
 				4. Set settings.Trello_Primary to your board ID
 				5. Set settings.Trello.Enabled to true
-				6. Congrats! The board is ready to be used;
-				7. Create a list and add cards to it;
-					http://prntscr.com/b9xswk
+				6. Congrats! The board is ready to be used
+				7. Create a list and add cards to it
 
 				- You can view lists in-game using :viewlist ListNameHere
 
 			Lists:
 				Moderators			- Card Format: Same as settings.Moderators
 				Admins				- Card Format: Same as settings.Admins
-				HeadAdmins				- Card Format: Same as settings.HeadAdmins
+				HeadAdmins			- Card Format: Same as settings.HeadAdmins
 				Creators			- Card Format: Same as settings.Creators
 				Banlist				- Card Format: Same as settings.Banned
 				Mutelist			- Card Format: Same as settings.Muted
@@ -141,7 +137,7 @@ local descs = {};			--// Contains settings descriptions
 																																																																									--]]
 
 settings.HideScript = true						 -- When the game starts the Adonis_Loader model will be hidden so other scripts cannot access the settings module; Disable if your game uses AssetService:SavePlaceAsync()
-settings.DataStore = "Adonis_1"					 -- DataStore the script will use for saving data; Changing this will lose any saved data
+settings.DataStore = "Ardornis_1"					 -- DataStore the script will use for saving data; Changing this will lose any saved data
 settings.DataStoreKey = "CHANGE_THIS"			 -- CHANGE THIS TO ANYTHING RANDOM! Key used to encrypt all datastore entries; Changing this will lose any saved data
 settings.DataStoreEnabled = true				 -- Disable if you don't want to load settings and admins from the datastore; PlayerData will still save
 settings.LocalDatastore = false				 -- If this is turned on, a mock DataStore will forcibly be used instead and shall never save across servers
@@ -353,10 +349,61 @@ settings.AntiMultiTool = false -- Prevents multitool and because of that many ot
 settings.AntiGod = false -- If a player does not respawn when they should have they get respawned
 -- settings.AntiHumanoidDeletion and settings.ProtectHats have been superseded Workspace.RejectCharacterDeletions 
 
-settings.AntiSpeed = true 			-- (Client-Sided) Attempts to detect speed exploits
-settings.AntiBuildingTools = false	-- (Client-Sided) Attempts to detect any HopperBin(s)/Building Tools added to the client
-settings.AntiAntiIdle = false 		-- (Client-Sided) Kick the player if they are using an anti-idle exploit. Highly useful for grinding/farming games
-settings.ExploitGuiDetection = false 		-- (Client-Sided) If any exploit GUIs are found in the CoreGui the exploiter gets kicked (If you use StarterGui:SetCore("SendNotification") with an image this will kick you)
+settings.HttpWait = 60					-- How long things that use the HttpService will wait before updating again
+settings.Trello_Enabled = false			-- Are the Trello features enabled?
+settings.Trello_Primary = ""			-- Primary Trello board
+settings.Trello_Secondary = {}			-- Secondary Trello boards (read-only)		Format: {"BoardID";"BoardID2","etc"}
+settings.Trello_AppKey = ""				-- Your Trello AppKey						  	
+settings.Trello_Token = ""				-- Trello token (DON'T SHARE WITH ANYONE!)    Get at: /1/connect?name=Trello_API_Module&response_type=token&expires=never&scope=read,write&key=YOUR_APP_KEY_HERE
+settings.Trello_HideRanks = false		-- If true, Trello-assigned ranks won't be shown in the admins list UI (accessed via :admins)
+
+
+---------------------
+-- _G API SETTINGS --
+---------------------
+
+settings.G_API = true					-- If true, allows other server scripts to access certain functions described in the API module through _G.Adonis
+settings.G_Access = false				-- If enabled, allows other scripts to access Adonis using _G.Adonis.Access; Scripts will still be able to do things like _G.Adonis.CheckAdmin(player)
+settings.G_Access_Key = "Example_Key"	-- Key required to use the _G access API; Example_Key will not work for obvious reasons
+settings.G_Access_Perms = "Read" 		-- Access perms
+settings.Allowed_API_Calls = {
+	Client = false;				-- Allow access to the Client (not recommended)
+	Settings = false;			-- Allow access to settings (not recommended)
+	DataStore = false;			-- Allow access to the DataStore (not recommended)
+	Core = false;				-- Allow access to the script's core table (REALLY not recommended)
+	Service = false;			-- Allow access to the script's service metatable
+	Remote = false;				-- Communication table
+	HTTP = false; 				-- HTTP-related things like Trello functions
+	Anti = false;				-- Anti-Exploit table
+	Logs = false;
+	UI = false;					-- Client UI table
+	Admin = false;				-- Admin related functions
+	Functions = false;			-- Functions table (contains functions used by the script that don't have a subcategory)
+	Variables = true;			-- Variables table
+	API_Specific = true;		-- API Specific functions
+}
+
+
+---------------------------
+-- ANTI-EXPLOIT SETTINGS --
+---------------------------
+
+--// IF YOU EXPERIENCE ISSUES WITH FALSE POSITIVES/RANDOM KICKING/CRASHING DISABLE ALL OF THESE!
+settings.Detection = true			-- (Default: true) 	If true: enables built-in anti-exploit detections that do not have their own settings.
+settings.CheckClients = true		-- (Default: true) 	Checks clients every minute or two to make sure they are still active.
+
+settings.ExploitNotifications = true        -- (Default: true)	Notify all moderators and higher-ups when a player is kicked or crashed from the AntiExploit.
+settings.CharacterCheckLogs = false			-- (Default: false)	If the character checks appear in exploit logs and exploit notifications.
+settings.AntiNoclip = false					-- (Default: false)	Attempts to detect noclipping and kills the player if found.
+settings.AntiRootJointDeletion = false		-- (Default: false)	Attempts to detect paranoid and kills the player if found.
+settings.AntiMultiTool = false 				-- (Default: false)	Prevents multitool and because of that many other exploits.
+settings.AntiGod = false 					-- (Default: false)	If a player does not respawn when they should have they get respawned.
+-- settings.AntiHumanoidDeletion and settings.ProtectHats have been superseded Workspace.RejectCharacterDeletions.
+
+settings.AntiSpeed = false 				-- (Default: false)	(Client-Sided) Attempts to detect speed exploits.
+settings.AntiBuildingTools = false		-- (Default: false)	(Client-Sided) Attempts to detect any HopperBin(s)/Building Tools added to the client.
+settings.AntiAntiIdle = false 			-- (Default: false)	(Client-Sided) Kick the player if they are using an anti-idle exploit. Highly useful for grinding/farming games.
+settings.ExploitGuiDetection = false 	-- (Default: false)	(Client-Sided) If any exploit GUIs are found in the CoreGui the exploiter gets kicked (If you use StarterGui:SetCore("SendNotification") with an image this will kick you).
 
 ---------------------
 -- END OF SETTINGS --
@@ -415,8 +462,8 @@ descs.HttpWait = [[ How long things that use the HttpService will wait before up
 descs.Trello_Enabled = [[ Are the Trello features enabled? ]]
 descs.Trello_Primary = [[ Primary Trello board ]]
 descs.Trello_Secondary = [[ Secondary Trello boards; Format: {"BoardID";"BoardID2","etc"} ]]
-descs.Trello_AppKey = [[ Your Trello AppKey; Link: https://trello.com/app-key ]]
-descs.Trello_Token = [[ Trello token (DON'T SHARE WITH ANYONE!); Link: https://trello.com/1/connect?name=Trello_API_Module&response_type=token&expires=never&scope=read,write&key=YOUR_APP_KEY_HERE ]]
+descs.Trello_AppKey = [[ Your Trello AppKey; Link ]]
+descs.Trello_Token = [[ Trello token (DON'T SHARE WITH ANYONE!) ]]
 descs.Trello_HideRanks = [[ If true, Trello-assigned ranks won't be shown in the admins list UI (accessed via :admins) ]]
 
 descs.G_API = [[ If true, allows other server scripts to access certain functions described in the API module through _G.Adonis ]]

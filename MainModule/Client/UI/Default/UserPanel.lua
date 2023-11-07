@@ -408,6 +408,7 @@ return function(data, env)
 						UI.Make("List", {
 							Title = "Ardornis Changelog";
 							Table = client.ArdChangelog;
+							RichTextAllowed = true;
 						})
 					end
 				}

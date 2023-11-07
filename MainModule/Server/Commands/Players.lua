@@ -524,18 +524,24 @@ return function(Vargs, env)
 			Args = {};
 			Description = "Shows you the script's changelog";
 			AdminLevel = "Players";
-			Function = function(plr: Player, args: {string})
+			Function = function(plr: Player, args: {string})--[[
 				Remote.MakeGui(plr, "Notification", {
 					Title = "Changelog";
 					Message = "Click here to view the Ardornis changelog.";
 					OnClick = Core.Bytecode(`client.Remote.Send('ProcessCommand','{Settings.Prefix}ardchanges')`);
 					Time = 12;
-				})
+				})]]-- Disabled due to redundancy
 				Remote.MakeGui(plr, "List", {
 					Title = "Change Log";
 					Icon = server.MatIcons["Text snippet"];
 					Table = server.Changelog;
 					Size = {500, 400};
+					TitleButtons = {
+						{
+							Text = "*";
+							OnClick = Core.Bytecode(`client.Remote.Send('ProcessCommand','{Settings.Prefix}ardchanges')`)
+						}
+					};
 				})
 			end
 		};
