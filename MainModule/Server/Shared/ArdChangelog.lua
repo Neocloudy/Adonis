@@ -11,10 +11,6 @@ return {
 	"<b>3.3b - UI Phase 2.1 Patch 1</b>";
 	"*Drag edges to expand*";
 	"";
-	"<b>Ardornis 3.4</b>";
-	"	<b>Adonis ports:</b>";
-	adonisupd .." Merged Adonis v240";
-	"";
 	"<b>Ardornis 3.3b UI Phase 2.1 Patch 1</b>";
 	add .." Ardornis changelogs have labels";
 	"	<b>Adonis ports:</b>";
